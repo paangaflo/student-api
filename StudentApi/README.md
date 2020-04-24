@@ -25,5 +25,5 @@ Para ejecutar en ambiente local solo debemos vamos a la opción Run Project.
 
 Ingresar en el navegador web a la siguiente ruta:
 ```shell script
-https://localhost:5001/api/students
+https://localhost:5001/swagger
 ```
