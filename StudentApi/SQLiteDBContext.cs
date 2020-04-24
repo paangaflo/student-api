@@ -8,10 +8,9 @@ namespace StudentApi
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Students>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-            });
+            modelBuilder.Entity<Students>()
+                .Property(e => e.Id)
+                .ValueGeneratedOnAdd();
 
             modelBuilder.Entity<Students>().HasData(
                 new Students() { Id = 1, Username = "juan.montoya", FirstName = "Juan", LastName = "Montoya", Age = 24, Career = "Systems engineer" },
